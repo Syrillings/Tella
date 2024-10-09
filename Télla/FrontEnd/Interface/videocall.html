@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+    :root {
+        --dark-color-a: #9c1b8b;
+                --dark-color-b: #9b62d1;
+                --light-color: #d9b2d1;
+                --success-color: #000000;
+                --error-color: #d9534f;
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        background: var(--light-color);
+        margin: 20px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    
+    /* Chat Page */
+    
+    .chat-container {
+        max-width: 1100px;        margin: 30px auto;
+        overflow: hidden;
+    }
+    
+    .chat-header {
+        background: var(--dark-color-a);
+        color: #fff;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+ 
+.close{
+    width:10px;
+    margin-bottom: 80px;
+}
+
+    .logo{
+        margin-right: 30px;
+        width: 150px;
+    }
+    .buttons{
+        line-height: 40px;
+    }
+    .videocall{
+        width: 120px;
+    }
+   
+    ::placeholder{
+        font-size:15px;
+    }
+    #createMeetingBtn{
+        cursor: pointer;
+        padding: 5px 10px;
+        background:var(--light-color);
+        color: var(--dark-color-a);
+        border: 0;
+        border-radius: 5px;
+        font-size: 17px;
+        margin-right: 3px;
+        margin-bottom: 15px;
+    }
+    #joinBtn{
+        cursor: pointer;
+        padding: 5px 10px;
+        background:var(--light-color);
+        color: var(--dark-color-a);
+        border: 0;
+        border-radius: 5px;
+        font-size: 17px;
+        margin-right: 20px;
+    }
+    #meetingIdTxt{
+        padding: 5px 5px;
+        background:white;
+        color: var(--dark-color-a);
+        border: 0;
+        border-radius: 5px;
+       /* margin-bottom: 20px;*/
+        
+    }
+   
+     @media (min-width: 375px) {
+        .screen{
+            margin-left: 8px;
+        }
+    }
+    @media (min-width: 414px) {
+        .screen{
+            margin-left: 8px;
+        }
+    }
+    @media (max-width: 600px) {
+
+        .logo{
+        margin-left: -12.5px;
+        width: 150px;
+    }
+    #createMeetingBtn{
+        cursor: pointer;
+        padding: 5px 5px;
+        background:var(--light-color);
+        color: var(--dark-color-a);
+        border: 0;
+       margin-bottom: 10px;
+        border-radius: 3px;
+        font-size: 17px;
+        margin-left: 25px;
+    }
+    #joinBtn{
+        cursor: pointer;
+        padding: 5px 10px;
+        background:var(--light-color);
+        border: 0;
+        border-radius: 5px;
+        font-size: 17px;
+        margin-left: 20px;
+        margin-top: 5%;
+        }
+
+#meetingIdTxt{
+    margin-top: 5px;
+}
+}
+    @media (min-width: 820px) {
+
+.logo{
+margin-left: -12.5px;
+width: 150px;
+}
+#createMeetingBtn{
+cursor: pointer;
+padding: 5px 5px;
+background:var(--light-color);
+color: var(--dark-color-a);
+border: 0;
+margin-bottom: 10px;
+border-radius: 5px;
+font-size: 17px;
+margin-left: 25px;
+}
+#joinBtn{
+cursor: pointer;
+padding: 5px 5px;
+background:var(--light-color);
+color: var(--dark-color-a);
+border: 0;
+border-radius: 5px;
+font-size: 17px;
+margin-left: 20px;
+margin-top: 5%;
+}
+    }
+@media (min-width: 1157px) {
+    .screen{
+            margin-left: 46px;
+        }
+        #createMeetingBtn{
+            margin-left:18.7px;
+        }
+       
+     }
+     #videoconatainer{
+        width: 15000px;
+     }
+     </style>
+  <title>Video CHat Room</title>
+</head>
+<body style="padding-top:-140px;">
+  <div class="chat-container">
+    <header class="chat-header">
+        <div margin-right:130px;><h1 style="font-size: 50px; font-family:'Times New Roman', Times, serif;">
+
+            <a href="room.html" > <img src="images/doctor.png" class="logo"></a></div>
+            <div id="join-screen">
+                <!-- Create new Meeting Button -->
+                <div><button id="createMeetingBtn">New Meeting</button></div>
+                <button id="joinBtn">Join Meeting</button>
+               <input type="text" id="meetingIdTxt" placeholder="Meeting ID" />
+              </div>
+          
+    </header>
+    <main class="chat-main">
+        <div class="buttons">
+    
+       </div>
+    </div>
+  </div>
+
+<html>
+  <head> </head>
+
+  <body>
+    <div class="screen">
+       <div id="textDiv"></div>
+
+    <div id="grid-screen" style="display: none">
+      <!-- To Display MeetingId -->
+      <h3 id="meetingIdHeading"></h3>
+
+      <!-- Controllers -->
+      <button id="leaveBtn" style="background: none; border: none; padding: 10px;">
+        <img src="images/leave.png" style="width: 50px;">
+      </button>
+      <button  id="toggleMicBtn" style="background: none; border: none; padding: 0;">
+        <img src="images/microphone.png" style="width: 50px;">
+    </button>
+      <button  id="toggleWebCamBtn" style="background: none; border: none; padding: 0;">
+        <img src="images/photo-camera.png" style="width: 50px;">
+    </button>
+
+      <!-- render Video -->
+      <div class="row" id="videoContainer" style="height: max-content;">
+
+      </div>
+    </div>
+</div>
+
+    <!-- Add VideoSDK script -->
+    <script src="https://sdk.videosdk.live/js-sdk/0.0.86/videosdk.js"></script>
+    <script src="JS/config.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
+</body>
+</html>
